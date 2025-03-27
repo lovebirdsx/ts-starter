@@ -13,9 +13,13 @@ gulp.task('watch-compile', async () => {
 	});
 });
 
+gulp.task('compile', async () => {
+	await exec('tsc', { workingDir, logPrefix: '[tsc] ', formatText: formatCommandOutput });
+});
+
 gulp.task('watch-run', async () => {
 	await new Promise<void>((resolve) => {
-		gulp.series('run', 'check', 'test')(() => resolve());
+		gulp.series('compile', 'run', 'check', 'test')(() => resolve());
 	});
 
 	gulp.watch(path.join(workingDir, 'out/**/*.js'), gulp.series('run', 'check', 'test'));
