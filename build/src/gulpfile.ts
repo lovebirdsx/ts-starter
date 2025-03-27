@@ -14,6 +14,10 @@ gulp.task('watch-compile', async () => {
 });
 
 gulp.task('watch-run', async () => {
+	await new Promise<void>((resolve) => {
+		gulp.series('run', 'check', 'test')(() => resolve());
+	});
+
 	gulp.watch(path.join(workingDir, 'out/**/*.js'), gulp.series('run', 'check', 'test'));
 });
 

@@ -4,6 +4,7 @@
   "main": "./out/main.js",
   "license": "MIT",
   "scripts": {
+    "postinstall": "cd build && yarn install",
     "watch": "nodemon -w build/src -e ts -x \"tsc -p ./build/tsconfig.json && gulp watch\""
   },
   "devDependencies": {
