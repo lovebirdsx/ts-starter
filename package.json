@@ -4,14 +4,14 @@
   "main": "./out/main.js",
   "license": "MIT",
   "scripts": {
-    "postinstall": "cd build && yarn install",
+    "postinstall": "tsc && cd build && yarn install && tsc",
+    "clean": "gulp clean",
     "watch": "nodemon -w build/src -e ts -x \"tsc -p ./build/tsconfig.json && gulp watch\""
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
     "@typescript-eslint/eslint-plugin": "^8.28.0",
     "@typescript-eslint/parser": "^8.28.0",
-    "electron": "^35.1.1",
     "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.5",

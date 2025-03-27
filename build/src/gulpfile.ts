@@ -2,6 +2,7 @@ import * as gulp from 'gulp';
 import * as path from 'path';
 import { spawn } from 'child_process';
 import { exec, formatCheckCircularText, formatCommandOutput, formatLintOutput, formatMochaTestOutput, formatTscCheckOutput } from './common/exec';
+import { cleanDirAsync } from './common/util';
 
 const workingDir = path.join(__dirname, '../../');
 
@@ -11,6 +12,13 @@ gulp.task('watch-compile', async () => {
 	return new Promise<void>((resolve) => {
 		child.on('close', resolve);
 	});
+});
+
+gulp.task('clean', async () => {
+	await cleanDirAsync(path.join(workingDir, 'out'));
+	await cleanDirAsync(path.join(workingDir, 'node_modules'));
+	await cleanDirAsync(path.join(workingDir, 'build', 'node_modules'));
+	await cleanDirAsync(path.join(workingDir, 'build', 'out'));
 });
 
 gulp.task('compile', async () => {
