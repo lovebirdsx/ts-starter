@@ -1,0 +1,26 @@
+{
+  "name": "ts-starter",
+  "version": "1.0.0",
+  "main": "./out/main.js",
+  "license": "MIT",
+  "scripts": {
+    "watch": "nodemon -w build/src -e ts -x \"tsc -p ./build/tsconfig.json && gulp watch\""
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "electron": "^35.1.1",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.5",
+    "gulp": "^5.0.0",
+    "madge": "^8.0.0",
+    "mocha": "^11.1.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.28.0"
+  }
+}

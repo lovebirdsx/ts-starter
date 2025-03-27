@@ -1,0 +1,21 @@
+# 忽略 node_modules 文件夹
+node_modules/
+
+# 忽略 npm 和 yarn 日志文件
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 忽略环境变量文件
+.env
+
+# 忽略构建产物目录
+dist/
+out/
+
+# 忽略 Electron 打包生成的文件（如 release 文件夹）
+release/
+
+# 忽略操作系统生成的文件
+.DS_Store
+Thumbs.db

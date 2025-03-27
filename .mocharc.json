@@ -1,0 +1,15 @@
+{
+	"require": [
+		"tsx"
+	],
+	"spec": [
+		"src/**/*.test.ts",
+		"build/**/*.test.ts"
+	],
+	"timeout": 5000,
+	"extension": [
+		"ts"
+	],
+	"ui": "tdd",
+	"colors": true
+}

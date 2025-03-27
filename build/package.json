@@ -1,0 +1,12 @@
+{
+  "name": "test-electron-build",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/gulp": "^4.0.17"
+  }
+}
